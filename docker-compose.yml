@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  docker-react-aer:
+    container_name: docker-react-aer
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - '/app/node_modules'
+    ports:
+      - "8080:80"
